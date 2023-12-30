@@ -22,7 +22,7 @@ class TestApp:
 
             response = app.test_client().post(
                 '/baked_goods',
-                data={
+                json={
                     "name": "Apple Fritter",
                     "price": 2,
                     "bakery_id": 5,
@@ -47,7 +47,7 @@ class TestApp:
 
             response = app.test_client().patch(
                 '/bakeries/1',
-                data = {
+                json = {
                     "name": "Your Bakery",
                 }
             )
